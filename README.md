@@ -1,87 +1,61 @@
-# Welcome to React Router!
+# Dashboard Applikation
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Diese Anwendung ist ein interaktives Dashboard, dessen zentraler Bestandteil die Generation von personalisierten Reiseplänen über GenAI ist. Nutzer können über ein Formular individuelle Reisen anlegen, die anschließend von **Gemini AI** automatisch mit Metadaten, Textbeschreibungen und strukturierten Reiseplänen angereichert werden.
+Zur visuellen Ergänzung nutzt die Anwendung die **Unsplash API**, um passende Bilder dynamisch zu den Reisen zu laden.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Die App bietet vollständige **Authentifizierung** mit E-Mail/Passwort sowie **Google OAuth2**, ergänzt durch einen **Gastzugang**, mit dem die Funktionalität ohne Registrierung getestet werden kann. Alle Nutzerdaten, Reisen und generierten Inhalte werden in **Appwrite** verwaltet.
+Das Dashboard zeigt zusätzlich eine Übersicht der registrierten Nutzer sowie verschiedene Statistiken zur Nutzung der Plattform.
 
-## Features
+Für **Fehler- und Performance-Monitoring** kommt **Sentry** zum Einsatz, inklusive Session-Replays (Screenshots & Videoaufzeichnungen), um Fehler effizient analysieren zu können.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Die Anwendung läuft vollständig produktionsreif auf meinem eigenen VPS. Das Deployment erfolgt als Docker-Container, der über Docker Compose orchestriert wird.
+Das Projekt ist unter einer Subdomain meiner persönlichen Website öffentlich erreichbar.
 
-## Getting Started
+## Core Framework
 
-### Installation
+  - **React 19**
+  - **React DOM 19**
 
-Install the dependencies:
+## Routing / Server Renderning
 
-```bash
-npm install
-```
+  - **react-router v7**
+  - **react-router/node**
 
-### Development
+## Deployment / Hosting
 
-Start the development server with HMR:
+   - **Docker Setup**
 
-```bash
-npm run dev
-```
+## UI / Styling
 
-Your application will be available at `http://localhost:5173`.
+   - **Tailwind CSS 4**
 
-## Building for Production
+## UI-Komponenten
 
-Create a production build:
+   - **Syncfusion React Komponenten**
 
-```bash
-npm run build
-```
+## KI / GenAI
 
-## Deployment
+   - **Google generative AI - Google Gemini API**
 
-### Docker Deployment
+## Backend / API / Auth
 
-To build and run using Docker:
+   - **Appwrite**
+        Auth
+        Datenbank
+        Storage
+        Collections
 
-```bash
-docker build -t my-app .
+## Monitoring / Logging
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+   - **Sentry**
+    - Fehlertracking
+    - Performance Monitoring
+    - Profiling
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Developer Tooling
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+   - **TypeScript 5.8**
+   - **Vite 6**
 
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+## TL:DR
+React 19 • React Router v7 (Full-Stack) • TypeScript • Vite 6 • Tailwind 4 • Appwrite Backend Syncfusion Komponenten • Masonry/Grid Layout • Sentry Monitoring Google Generative AI Integration • SSR • Docker-ready • Unsplash API Integration
